@@ -1,1 +1,265 @@
-../../../komorebi.json
+{
+  "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.38/schema.json",
+  "app_specific_configuration_path": "$Env:USERPROFILE/applications.json",
+  "window_hiding_behaviour": "Cloak",
+  "window_handling_behaviour": "Sync",
+  "cross_monitor_move_behaviour": "Insert",
+  "window_container_behaviour": "Create",
+  "float_override": false,
+  "default_workspace_padding": 0,
+  "default_container_padding": 4,
+  "global_work_area_offset": {
+    "top": 3,
+    "left": 3,
+    "bottom": 6,
+    "right": 6
+  },
+  "border": true,
+  "border_implementation": "Windows",
+  "border_style": "System",
+  "border_width": 0,
+  "border_offset": -1,
+  "border_colours": {
+    "single": "#859bc8",
+    "stack": "#9d7cbd",
+    "floating": "#f38baf",
+    "monocle": "#f38ba8",
+    "unfocused": "#303030",
+    "unfocused_locked": "#303030"
+  },
+
+  "mouse_follows_focus": false,
+  "focus_follows_mouse": "Komorebi",
+  "transparency": false,
+  "transparency_alpha": 200,
+  "transparency_ignore_rules": [
+    {
+      "kind": "Title",
+      "id": "YouTube",
+      "matching_strategy": "Contains"
+    }
+  ],
+
+  "animation": {
+    "enabled": false,
+    "duration": 400,
+    "fps": 100,
+    "style": {
+      "movement": "EaseOutBack",
+      "transparency": "EaseInSine"
+    }
+  },
+
+  "stackbar": {
+    "height": 28,
+    "mode": "OnStack",
+    "label": "Process",
+    "tabs": {
+      "width": 150,
+      "font_family": "JetBrainsMono NFP",
+      "font_size": 14,
+      "background": "#1a1e23",
+      "focused_text": "#ffffff",
+      "unfocused_text": "#8b8b8b"
+    }
+  },
+
+  "unmanaged_window_operation_behaviour": "Op",
+  "remove_titlebar_applications": [
+    {
+      "kind": "Exe",
+      "id": "xxxchrome.exe",
+      "matching_strategy": "Equals"
+    }
+  ],
+  "floating_applications": [
+    {
+      "kind": "Exe",
+      "id": "Microsoft.Photos.exe",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Exe",
+      "id": "ApplicationFrameHost.exe",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Exe",
+      "id": "VALORANT-Win64-Shipping.exe",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Exe",
+      "id": "Valorant.exe",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Exe",
+      "id": "Cold Turkey Blocker.exe",
+      "matching_strategy": "Equals"
+    },
+
+    {
+      "kind": "Title",
+      "id": "Install Theme",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Title",
+      "id": "Extensions",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Title",
+      "id": "Add New Task",
+      "matching_strategy": "Equals"
+    }
+  ],
+
+  "ignore_rules": [
+    {
+      "kind": "Exe",
+      "id": "xxxTickTick.exe",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Exe",
+      "id": "ChatGPT.exe",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Exe",
+      "id": "SteelSeriesGGClient.exe",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Exe",
+      "id": "GoogleDriveFS.exe",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Exe",
+      "id": "FastKeys.exe",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Exe",
+      "id": "Notepad.exe",
+      "matching_strategy": "Equals"
+    }
+  ],
+
+  "monitors": [
+    {
+      "workspaces": [
+        {
+          "name": "N",
+          "layout": "BSP",
+          "window_container_behaviour": "Append",
+          "initial_workspace_rules": [
+            {
+              "kind": "Exe",
+              "id": "Obsidian.exe",
+              "matching_strategy": "Equals"
+            },
+            {
+              "kind": "Exe",
+              "id": "TickTick.exe",
+              "matching_strategy": "Equals"
+            }
+          ]
+        },
+        {
+          "name": "1",
+          "layout": "BSP"
+        },
+        {
+          "name": "2",
+          "layout": "BSP"
+        },
+        {
+          "name": "3",
+          "layout": "Scrolling"
+        },
+        {
+          "name": "4",
+          "layout": "BSP",
+          "float_override": true
+        },
+        {
+          "name": "G",
+          "layout": "BSP",
+          "workspace_rules": [
+            {
+              "kind": "Exe",
+              "id": "AimLab_tb.exe",
+              "matching_strategy": "Equals"
+            },
+            {
+              "kind": "Exe",
+              "id": "Valorant.exe",
+              "matching_strategy": "Equals"
+            },
+            {
+              "kind": "Exe",
+              "id": "Riot Client.exe",
+              "matching_strategy": "Equals"
+            },
+            {
+              "kind": "Exe",
+              "id": "VALORANT-Win64-Shipping.exe",
+              "matching_strategy": "Equals"
+            }
+          ]
+        },
+        {
+          "name": "C",
+          "layout": "BSP",
+          "window_container_behaviour": "Append",
+          "initial_workspace_rules": [
+            {
+              "kind": "Exe",
+              "id": "Beeper.exe",
+              "matching_strategy": "Equals"
+            },
+            {
+              "kind": "Exe",
+              "id": "Youtube Music.exe",
+              "matching_strategy": "Equals"
+            },
+            {
+              "kind": "Exe",
+              "id": "Telegram.exe",
+              "matching_strategy": "Equals"
+            },
+            {
+              "kind": "Title",
+              "id": "WhatsApp",
+              "matching_strategy": "Equals"
+            },
+            {
+              "kind": "Title",
+              "id": "Instagram",
+              "matching_strategy": "Equals"
+            },
+            {
+              "kind": "Title",
+              "id": "YouTube Music",
+              "matching_strategy": "Equals"
+            },
+            {
+              "kind": "Exe",
+              "id": "Discord.exe",
+              "matching_strategy": "Equals"
+            },
+            {
+              "kind": "Title",
+              "id": "Spotify",
+              "matching_strategy": "Equals"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

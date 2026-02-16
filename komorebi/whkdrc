@@ -1,1 +1,141 @@
-../../../whkdrc
+.shell powershell
+
+# Reload whkd configuration
+# alt + o                 : taskkill /f /im whkd.exe && start /b whkd # if shell is cmd
+#alt + o                 : taskkill /f /im whkd.exe; Start-Process whkd -WindowStyle hidden # if shell is pwsh / powershell
+#alt + shift + r         : komorebic reload-configuration
+
+alt + o                  : komorebic toggle-shortcuts
+#alt + f                  : komorebic toggle-maximize
+
+# App shortcuts - these require shell to be pwsh / powershell
+# The apps will be focused if open, or launched if not open
+# alt + f                 : if ($wshell.AppActivate('Firefox') -eq $False) { start firefox }
+# alt + b                 : if ($wshell.AppActivate('Chrome') -eq $False) { start chrome }
+
+#alt + q                 : komorebic close
+#alt + m                 : komorebic minimize
+
+#stackbar
+alt + b                 : komorebic stackbar-mode never
+alt + shift + b         : komorebic stackbar-mode on-stack
+alt + ctrl + b          : komorebic stackbar-mode always
+
+
+# Focus windows
+alt + h                 : komorebic focus left
+alt + j                 : komorebic focus down
+alt + k                 : komorebic focus up
+alt + l                 : komorebic focus right
+
+
+# Move windows
+alt + shift + h         : komorebic move left
+alt + shift + j         : komorebic move down
+alt + shift + k         : komorebic move up
+alt + shift + l         : komorebic move right
+alt + shift + return     : komorebic promote
+
+# Stack windows
+alt + ctrl + h          : komorebic stack left
+alt + ctrl + j          : komorebic stack down
+alt + ctrl + k          : komorebic stack up
+alt + ctrl + shift + j  : komorebic stack right
+alt + ctrl + l          : komorebic stack right
+
+
+#alt + oem_1            : komorebic unstack # oem_1 is ;
+#alt + oem_4            : komorebic cycle-stack previous # oem_4 is [
+
+
+# Manipulate windows
+# Layouts
+alt + w                 : komorebic stack-all #allstack
+alt + e                 : komorebic unstack-all #allunstack
+
+alt + r                 : komorebic flip-layout horizontal #position
+alt + shift + r         : komorebic flip-layout vertical #position
+
+alt + q                 : komorebic unstack # oem_1 is ;
+
+alt + ctrl + o          : komorebic toggle-transparency #opacity
+
+alt + t                 : komorebic toggle-float #yacht #float state of focused window
+
+alt + shift + t         : komorebic toggle-float-override #state -- new windows -- all workspace
+alt + shift + w         : komorebic toggle-window-container-behaviour #stack -- new windows -- all workspace
+#this is basically stack override
+alt + ctrl + w          : komorebic toggle-workspace-window-container-behaviour #stack -- new windows -- current w.
+#this is basically stack override
+alt + ctrl + t          : komorebic toggle-tiling #state -- all windows -- current workspace
+alt + ctrl + x          : komorebic toggle-lock
+#alt + ctrl + w          : komorebic retile
+#alt + ctrl + w          : komorebic enforce-workspace-rules
+#alt + ctrl + q          : komorebic enforce-workspace-rules
+
+alt + z                 : komorebic cycle-stack previous #windows       
+alt + x                 : komorebic cycle-stack next #windows       
+alt + shift + z         : komorebic cycle-stack-index previous #windows       
+alt + shift + x         : komorebic cycle-stack-index next #windows       
+alt + v                 : komorebic cycle-focus next #viewww #windows         
+alt + shift + v         : komorebic cycle-layout next
+alt + i                 : komorebic unmanage
+alt + m                 : komorebic manage
+#alt + b                : komorebic cycle-stack next #stacks       
+#alt + shift + v        : komorebic cycle-layout previous
+#alt + shift + b        : komorebic cycle-stack previous #stacks     
+#alt + shift + c        : komorebic cycle-focus previous #windows       
+#alt + shift + c        : komorebic cycle-focus previous windows 
+#alt + y                : komorebic toggle-monocle
+
+
+# Window manager options
+
+alt + shift + p         : komorebic toggle-pause
+
+
+
+# Workspaces
+alt + 0                 : komorebic focus-last-workspace
+
+alt + a                 : komorebic cycle-workspace previous
+alt + s                 : komorebic cycle-workspace next
+
+alt + oem_3             : komorebic focus-workspace 0
+alt + 1                 : komorebic focus-workspace 1
+alt + 2                 : komorebic focus-workspace 2
+alt + 3                 : komorebic focus-workspace 3
+alt + 4                 : komorebic focus-workspace 4
+alt + 5                 : komorebic focus-workspace 5
+alt + c                 : komorebic focus-workspace 6
+
+# Move windows across workspaces
+alt + shift + 0         : komorebic move-to-last-workspace
+
+alt + shift + a         : komorebic cycle-move-to-workspace previous
+alt + shift + s         : komorebic cycle-move-to-workspace next
+
+alt + shift + oem_3     : komorebic move-to-workspace 0
+alt + shift + 1         : komorebic move-to-workspace 1
+alt + shift + 2         : komorebic move-to-workspace 2
+alt + shift + 3         : komorebic move-to-workspace 3
+alt + shift + 4         : komorebic move-to-workspace 4
+alt + shift + 5         : komorebic move-to-workspace 5
+alt + shift + c         : komorebic move-to-workspace 6
+
+# New Workspace
+
+alt + shift + oem_plus  : komorebic new-workspace # oem_6 is ]
+alt + shift + oem_minus : komorebic close-workspace # oem_4 is [
+
+
+# Resize
+alt + oem_6             : komorebic resize-axis horizontal increase #]
+alt + oem_4             : komorebic resize-axis horizontal decrease #[
+alt + shift + oem_6     : komorebic resize-axis vertical increase
+alt + shift + oem_4     : komorebic resize-axis vertical decrease
+
+
+
+# Cycle focus to the previous window
+#alt + shift + c : komorebic cycle-focus previous.shell powershell
