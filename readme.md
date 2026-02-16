@@ -23,3 +23,8 @@ Modern text editor configuration.
 A highly customizable status bar for Windows.
 - `config.yaml`: Bar layout and widget settings.
 - `styles.css`: Custom CSS for styling the bar.
+
+---
+
+Made with ❤️ by [Shafin](https://github.com/beingshafin)
+
